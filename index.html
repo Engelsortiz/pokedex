@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex UCC</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <strong>POKÉDEX UCC</strong>
+    <nav>Laboratorio web</nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="etiqueta">EXPLORA EL MUNDO POKÉMON</span>
+      <h1>¡Atrápalos a todos!</h1>
+      <p>Descubre tipos, estadísticas y movimientos.</p>
+    </div>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png">
+  </section>
+
+  <main>
+    <h2>Encuentra tu Pokémon</h2>
+    <section class="filtros" aria-label="Filtros">
+      <label>Nombre<input id="nombre" placeholder="pikachu"></label>
+      <label>Movimiento<input id="movimiento" placeholder="tackle"></label>
+      <label>Tipo<select id="tipo"><option value="">Todos</option></select></label>
+      <label>Ataque mínimo<input id="minimo" type="number" min="0" value="0"></label>
+      <label>Orden
+        <select id="orden">
+          <option value="id">Número</option>
+          <option value="nombre">Nombre A-Z</option>
+          <option value="ataque">Mayor ataque</option>
+        </select>
+      </label>
+      <button id="limpiar" type="button">Limpiar</button>
+    </section>
+
+    <p id="estado" role="status">Preparando catálogo...</p>
+    <section id="catalogo" class="catalogo"></section>
+  </main>
+
+  <footer>Proyecto académico UCC · Datos e imágenes de PokéAPI</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
